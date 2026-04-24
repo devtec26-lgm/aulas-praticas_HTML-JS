@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
+    <title>home</title>
+    <script src="scriptBank.js"></script>
 </head>
 <body>
-    <h2>System bank</h2>
+    <h2>System BANK</h2>
 
     <p>escolha a operação bancária</p>
 
@@ -15,11 +15,20 @@
     2 - saque <br>
     3 - depósito <br>
 
-    <p>informe a operação abaixo</p>
-    <input type="number" id="operacao" min="1">
+    <p>Informe o código da operação abaixo</p>
+    <input type="number" id="operacao" min="1" max="3">
     <button onclick="sisbank()">consultar</button>
 
-    <h2 id="mensagem"></h2>
+    <h3 id="mensagem"></h3>
+
+    <input type="text" id="saldo" placeholder="***********"> <hr>
+    <div id="opSaque"> </div>
+    <p id="mensagemSaque"></p>
+    <div id="btn1" onclick="limpar()"></div>
+
+    <div id="deposito"> </div>
+    <p id="mensagemDeposito"></p>
+    <div id="btn2" onclick="limpar()"></div>
 
 </body>
 </html>
