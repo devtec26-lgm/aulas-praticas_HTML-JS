@@ -8,8 +8,8 @@ function autenticar(){
     } else {
         mensagem = "usuário ou senha incorretos!";
     }
-    document.getElementById("mensagem").innerHTML = mensagem;
-    setTimeout(function() {
+        document.getElementById("mensagem").innerHTML = mensagem;
+        setTimeout(function() {
         location.href = "home.html";
     }, 900);
 
@@ -32,7 +32,7 @@ function sisbank(){
                 document.getElementById("opSaque").innerHTML += '<input type="text" id="valorSaque" placeholder="**********">';
                 document.getElementById("opSaque").innerHTML += '<button onclick="realizarSaque()">realizar saque</button>';
                 document.getElementById("mensagem").innerHTML = mensagem;
-                document.getElementById("btn1").innerHTML += "<button onclick='limpar()'>OK</button>";
+                
                 document.getElementById("saldo").value = "saldo: R$" + saldo;
                 
             break;
@@ -42,7 +42,7 @@ function sisbank(){
                     document.getElementById("deposito").innerHTML += '<input type="text" id="valorDeposito" placeholder="**********">';
                     document.getElementById("deposito").innerHTML += '<button onclick="realizarDeposito()">realizar depósito</button>';
                     document.getElementById("mensagem").innerHTML = mensagem;
-                    document.getElementById("btn2").innerHTML += '<button onclick="limpar()">OK</button>';
+                    
                     document.getElementById("saldo").value = "saldo: R$" + saldo;
                     
                 break;
@@ -63,6 +63,7 @@ function realizarSaque(){
     }
     document.getElementById("mensagemSaque").innerHTML = mensagem;
     document.getElementById("saldo").value = "saldo: R$" + saldo.toFixed(2);
+    document.getElementById("btn2").innerHTML += "<button onclick='limpar()'>OK</button>";
 }
 
 function realizarDeposito(){
@@ -77,6 +78,7 @@ function realizarDeposito(){
     }
     document.getElementById("mensagemDeposito").innerHTML = mensagem;
     document.getElementById("saldo").value = "saldo: R$" + saldo.toFixed(2);
+    document.getElementById("btn3").innerHTML += '<button onclick="limpar()">OK</button>';
 }
 
 function limpar(){
@@ -88,5 +90,6 @@ function limpar(){
     document.getElementById("mensagemSaque").innerHTML = "";
     document.getElementById("mensagemDeposito").innerHTML = "";
     document.getElementById("btn1").innerHTML = "";
-    document.getElementById("btn2").innerHTML = ""; 
+    document.getElementById("btn2").innerHTML = "";
+    document.getElementById("btn3").innerHTML = ""; 
 }
