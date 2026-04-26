@@ -22,7 +22,8 @@ function sisbank(){
 
     switch (operacao) {
         case 1:
-            mensagem = " seu saldo é: R$" + saldo;
+            mensagem = " Seu saldo é: R$" + saldo;
+            document.getElementById("msgSaldo").innerHTML = "Saldo a tela";
             document.getElementById("saldo").value = mensagem;
             document.getElementById("btn1").innerHTML += "<button onclick='limpar()'>OK</button>";
         break;
@@ -83,6 +84,7 @@ function realizarDeposito(){
 
 function limpar(){
     document.getElementById("operacao").value = "";
+    document.getElementById("msgSaldo").innerHTML = "";
     document.getElementById("saldo").value = "";
     document.getElementById("mensagem").innerHTML = "";
     document.getElementById("opSaque").innerHTML = "";
