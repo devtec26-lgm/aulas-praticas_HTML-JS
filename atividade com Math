@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ <head>
+   <meta charset="utf-8">
+ </head> 
+  <body>
+    <h1>JOGO ADIVINHE E GANHE</h1>
+    <H2>Regra: Acerte o número aleatório e ganhe brindes</H2>
+    <label>informe um número</label>
+    <input type="number" id="numero" max="100" min="0">
+    <label>N°aleatório</label>
+    <input type="number" id="randonn" max="100">
+    <button onclick="sorteio()">Sortear</button>
+    <h3 id="resultado" ></h3>
+  
+  <script>
+    function sorteio(){
+      let num = Number(document.getElementById("numero").value);
+      let randonn = Number(Math.round(Math.random()*10));
+      document.getElementById("randonn").value= randonn.toFixed(1);
+       if (num === randonn){
+         document.getElementById("resultado").innerHTML= "Parabéns você acertou!"
+       } else{
+         document.getElementById("resultado").innerHTML = "Não foi dessa vez, tente .novamente"
+       }
+    }
+  </script>
+  </body>
+</html>
 
