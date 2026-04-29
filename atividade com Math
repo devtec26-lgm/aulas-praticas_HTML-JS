@@ -19,9 +19,10 @@
       let randonn = Number(Math.round(Math.random()*10));
       document.getElementById("randonn").value= randonn.toFixed(1);
        if (num === randonn){
-         document.getElementById("resultado").innerHTML= "Parabéns você acertou!"
+         document.getElementById("resultado").innerHTML= "\u{1F389}Parabéns você acertou! \u{1f389}";
+documento.getElementById("resultado").style="color:Green";
        } else{
-         document.getElementById("resultado").innerHTML = "Não foi dessa vez, tente .novamente"
+         document.getElementById("resultado").innerHTML = "\u{1F629}Não foi dessa vez, tente novamente"
        }
     }
   </script>
