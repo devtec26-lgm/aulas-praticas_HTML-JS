@@ -2,7 +2,75 @@
 <html lang="pt-br">
  <head>
    <meta charset="utf-8">
- </head> 
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color:blue;
+    background-color:lightblue;
+    text-align:center;
+    border: 2px solid rgb(10, 77, 201);
+    border-radius: 15px;
+}
+div#painel{
+    display: block;
+    background: linear-gradient(to bottom, lightblue, white);
+    border: 2px solid rgb(9, 74, 148);
+    border-radius: 15px;
+    width: 400px;
+    margin: 20px auto;
+    text-align:center;
+    padding: 10px;
+}
+input#numero,#randonn{
+    display: flexbox;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 5px;
+} 
+div label{
+    text-align:left;
+    align-items:left;
+    font-size: 18px;
+    margin: 5px;
+}
+button#sorteio{
+    font-size: 20px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    background-color: rgb(4, 129, 56);
+    color: white;
+    cursor: pointer;
+}
+button#sorteio:hover{
+    background-color: rgb(8, 211, 93);
+    color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+}
+button#limpar{
+    font-size: 20px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    background-color: rgb(95, 95, 79);
+    color: white;
+    cursor: pointer;
+}
+button#limpar:hover{
+    background-color: rgb(202, 140, 7);
+    color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+}
+</style>
+ </head>
+
   <body>
     <h1>JOGO ADIVINHE E GANHE</h1>
     <H2>Regra: Acerte o número aleatório e ganhe brindes</H2>
@@ -14,17 +82,23 @@
     <h3 id="resultado" ></h3>
   
   <script>
-    function sorteio(){
-      let num = Number(document.getElementById("numero").value);
-      let randonn = Number(Math.round(Math.random()*10));
-      document.getElementById("randonn").value= randonn.toFixed(1);
-       if (num === randonn){
-         document.getElementById("resultado").innerHTML= "\u{1F389}Parabéns você acertou! \u{1f389}";
-documento.getElementById("resultado").style="color:Green";
-       } else{
-         document.getElementById("resultado").innerHTML = "\u{1F629}Não foi dessa vez, tente novamente"
-       }
+    function sorteio() {
+    let num = Number(document.getElementById("numero").value);
+    let randonn = Number(Math.round(Math.random() * 10));
+    document.getElementById("randonn").value = randonn;
+    if (num === randonn) {
+        document.getElementById("resultado").innerHTML = "\u{1F389}Parabéns você acertou! \u{1f389}";
+        document.getElementById("resultado").style = "color:Green";
+       
+    } else {
+        document.getElementById("resultado").innerHTML = "\u{1F629}Não foi dessa vez, tente novamente"
     }
+}
+function limpar() {
+    document.getElementById("numero").value = "";
+    document.getElementById("randonn").value = "";
+    document.getElementById("resultado").innerHTML = "";
+}
   </script>
   </body>
 </html>
