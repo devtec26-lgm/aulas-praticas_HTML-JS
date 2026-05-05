@@ -8,11 +8,11 @@ const messageTextarea = document.querySelector('#message');
 form.addEventListener('submit',(event) => {
     event.preventDefault();
 
-    /*verifica se o nome esta vazio
+    //verifica se o nome esta vazio
     if(nameInput.value.trim() === ''){
         alert('Por favor, preencha o campo de nome.');
         return;
-    } */
+    } 
 
     //verifica se o email esta vazio ou invalido
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
