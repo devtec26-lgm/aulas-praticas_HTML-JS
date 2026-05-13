@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>sistema de vendas</h2>
+    <p>Quantidade de vendas: <span id="quantidade-vendas">0</span></p>
+    <input type="number" id="qtd" placeholder="Quantidade">
+    <button onclick="mVendas()">mostrar vendas</button>
+
+    <h2>adiconar itens na lista de compras</h2>
+    <p>digite um item: </p>
+    <input type="text" id="item" placeholder="item">
+    <button onclick="mCompras()">adicionar item</button>
+    <button onclick="limparlista2()">limpar lista</button>
+    <ul id="lista-compras"></ul>
+
+    <h2>Exibir lista de compras</h2>
+    <input type="text" id="item2" placeholder="item">
+    <button onclick="adicionar()">adicionar</button> 
+    <button onclick="excluir()">excluir último</button>
+    <button onclick="exibirLista()">exibir lista</button> 
+    <button onclick="limparlista()">limpar lista</button>
+    <p id="aviso">aguardando item<span class="reticencias"></span></p>
+    <h4 id="exibir-lista"></h4>
+    
+
+</body>
+</html>
