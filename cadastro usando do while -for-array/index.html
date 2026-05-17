@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h2> ### cadastro com funcão while ###</h2>
+  <button onclick="cadastrar()" >cadastrar</button>
+  <p id="resultado"></p>
+  
+  <h2>%%%% cadastro com do while %%%%</h2>
+  <button onclick="cadastrardw()">cadastro2</button>
+  <p id="resultado2"></p>
+  
+  <h2>¥¥¥ cadastro com for ¥¥¥</h2>
+  <button onclick="cadastrofor()">cadastro 3</button>
+  <p id="resp"></p>
+  
+  <script>
+    function cadastrar(){
+      let vagas = 5;
+      let texto = "";
+      while(vagas > 0){
+        texto += "produto cadastrado" + "<br>";
+        vagas--;
+      }
+      texto+= "ops! limite atingido."
+      document.getElementById("resultado").innerHTML = texto
+    }
+    
+    function cadastrardw(){
+      let continuar;
+      let texto = "";
+      do{
+       texto += "produto cadastrado<br>";
+       continuar = prompt("deseja realizar um novo cadastro, sim/não?");
+       
+      }while(continuar == "sim");
+      document.getElementById("resultado2").innerHTML = texto; 
+    }
+    function cadastrofor(){
+      texto = "";
+      produto = ['lapis',  'caneta', 'papel', 'tesoura', 'borracha']
+      for(let i = 0; i < produto.length; i++){
+        texto += `produto: ${produto[i]}- cadastrado<br>`;
+      }
+      document.getElementById("resp").innerHTML = texto;
+    }
+  </script>
+</body>
+</html>
