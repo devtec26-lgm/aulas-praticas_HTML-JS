@@ -1,0 +1,92 @@
+/* root = cores padrões da pagina*/
+:root {
+    --cor-fundo: #151453;
+    --cor-primaria: #3498db;
+    --cor-secundaria: #9923bd;
+    --cor-texto: #333;
+    --cor-erro: #e74c3c;
+    --cor-sucesso: #2ecc71;
+    --cor-main: #ccc;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Arial, sans-serif;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+}
+
+main {
+    background-color: var(--cor-main);
+    padding: 25px;
+    border-radius: 8px;
+    width: 350px;
+    margin: auto;
+  
+}
+
+h1 {
+    text-align: center;
+    color: var(--cor-primaria);
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 8px;
+    border: 1px solid var(--cinza);
+    border-radius: 8px;
+    font-size: 16px;
+    
+}
+
+select {
+    width: 97%;
+    padding: 12px;
+    margin: 8px;
+    border: 1px solid var(--cor-texto);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+
+button {
+    width: 90%;
+    padding: 12px;
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px;
+    box-shadow: 2px 2px 15px var(--cor-fundo);
+}
+
+button:hover {
+    background-color: var(--cor-secundaria);
+    opacity: 0.9;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+#lista {
+    background-color: var(--cor-main);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#mensagem {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--cor-texto);
+}
+
+p {
+    border-bottom: 1px solid var(--cor-texto);
+    padding: 8px;
+}
