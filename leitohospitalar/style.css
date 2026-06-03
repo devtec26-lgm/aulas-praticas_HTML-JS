@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif, Helvetica, sans-serif,monospace;
-    background: linear-gradient(to right, #c2e1f0, #698fc9);
+    background-image: url("image/background.png");
     text-align: center;
     padding: 0px;
     box-sizing: border-box;
