@@ -69,9 +69,7 @@ function zerarLeitos() {
 
     leitos = 0;
 
-    document.getElementById("resultado").innerHTML =
-
-        leitos + " Leitos Ocupados";
+    document.getElementById("resultado").innerHTML = leitos + " Leitos Ocupados";
 
     let leitosLivres = limitemax - leitos;
     document.getElementById("leitosLivres").innerHTML = leitosLivres + " Leitos livres";
