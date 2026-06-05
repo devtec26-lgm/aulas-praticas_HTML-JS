@@ -1,7 +1,7 @@
 let leitos = 0;
 let limitemax = 2;
 let paciente = [];
-let texto = "";
+//let texto = "";
 
 
 
@@ -18,14 +18,9 @@ function ocuparLeito() {
 
         let agora = new Date();
 
-        let dataHora =
-            agora.toLocaleDateString("pt-BR") + " " +
-            agora.toLocaleTimeString("pt-BR");
+        let dataHora = agora.toLocaleDateString("pt-BR") + " " + agora.toLocaleTimeString("pt-BR");
 
-        paciente.push({
-            nome: nomePaciente,
-            dataHora: dataHora
-        });
+        paciente.push({nome: nomePaciente, dataHora: dataHora});
         
         
         leitos++;
