@@ -26,7 +26,7 @@ function ocuparLeito() {
         leitos++;
         
         document.getElementById("resultado").innerHTML = leitos + " Leitos Ocupados";
-        
+        document.getElementById("nomePaciente").value = "";
         //document.getElementById("mensagem").innerHTML = "Paciente " + nomePaciente + " ocupou um leito.";
         //document.getElementById("mensagem2").innerHTML = "<button id='limpar' onclick='limpar()'>ok</button>";
 
