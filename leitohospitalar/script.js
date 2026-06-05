@@ -10,18 +10,30 @@ function ocuparLeito() {
     if (leitos < limitemax) {
         let nomePaciente = document.getElementById("nomePaciente").value;
         paciente.push(nomePaciente);
-        //paciente++;
+        
         if (nomePaciente == "") {
             alert("Por favor, insira o nome do paciente.");
             return;
         }
 
+        let agora = new Date();
+
+        let dataHora =
+            agora.toLocaleDateString("pt-BR") + " " +
+            agora.toLocaleTimeString("pt-BR");
+
+        paciente.push({
+            nome: nomePaciente,
+            dataHora: dataHora
+        });
+        
+        
         leitos++;
         
         document.getElementById("resultado").innerHTML = leitos + " Leitos Ocupados";
         
-        document.getElementById("mensagem").innerHTML = "Paciente " + nomePaciente + " ocupou um leito.";
-        document.getElementById("mensagem2").innerHTML = "<button id='limpar' onclick='limpar()'>ok</button>";
+        //document.getElementById("mensagem").innerHTML = "Paciente " + nomePaciente + " ocupou um leito.";
+        //document.getElementById("mensagem2").innerHTML = "<button id='limpar' onclick='limpar()'>ok</button>";
 
         
 
@@ -40,12 +52,12 @@ function ocuparLeito() {
     }
 }
 
-function limpar() {
+/*function limpar() {
     document.getElementById("mensagem").innerHTML = "";
     document.getElementById("nomePaciente").value = "";
     document.getElementById("mensagem2").innerHTML = "";
     
-}
+} */
 
 
 function liberarLeito() {
@@ -57,12 +69,14 @@ function liberarLeito() {
         exibirPacientes();
     }
 
-    document.getElementById("resultado").innerHTML =
-
-        leitos + " Leitos Ocupados";
+    document.getElementById("resultado").innerHTML = leitos + " Leitos Ocupados";
 
     let leitosLivres = limitemax - leitos;
     document.getElementById("leitosLivres").innerHTML = leitosLivres + " Leitos livres";
+
+    if (leitos < limitemax) {
+        document.getElementById("zerar").innerHTML = "";
+    }
 }
 
 function zerarLeitos() {
@@ -86,7 +100,7 @@ function exibirPacientes() {
     
     let texto = "";
     for (let i = 0; i < paciente.length; i++) {
-        texto += `<li>${paciente[i]}</li>`;
+        texto += `<li>${paciente[i].nome} - ${paciente[i].dataHora}</li>`;
     }
     document.getElementById('exibirLista').innerHTML = texto;
     
