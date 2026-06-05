@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif, Helvetica, sans-serif,monospace;
-    background-image: url("image/background.png");
+    background-image: url("image/background.png"); /*adiciona imagem como plano de fundo*/
     text-align: center;
     padding: 0px;
     box-sizing: border-box;
